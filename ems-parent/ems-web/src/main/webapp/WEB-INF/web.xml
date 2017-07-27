@@ -1,0 +1,37 @@
+<web-app id="WebApp_ID" version="2.4" 
+	xmlns="http://java.sun.com/xml/ns/j2ee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	
+	<display-name>Spring JDBC Template EMS Application</display-name>
+	
+	<!-- Configuration file for the root application context -->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+            WEB-INF/ems-servlet.xml
+        </param-value>
+    </context-param>
+	
+	<!-- Configuration for the DispatcherServlet -->
+	<servlet>
+		<servlet-name>ems</servlet-name>
+			<servlet-class>
+				org.springframework.web.servlet.DispatcherServlet
+			</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ems</servlet-name>
+		<url-pattern>*.rest</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

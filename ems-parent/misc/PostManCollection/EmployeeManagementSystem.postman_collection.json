@@ -1,0 +1,237 @@
+{
+	"variables": [],
+	"info": {
+		"name": "EmployeeManagementSystem",
+		"_postman_id": "9135d82b-720f-b545-5d7d-32f6a9fe8e5c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login.rest",
+			"request": {
+				"url": "http://localhost:8080/ems-web/employee/login.rest",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"userName\" : \"user1\",\n \"password\" : \"password123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getEmployeeList.rest",
+			"request": {
+				"url": "http://localhost:8080/ems-web/employee/getEmployeeList.rest",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "CCA6FE62EB2131D9A5A98CE9530F5BE48830520884843676CD4EA610488C4B85",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"userName\" : \"user1\",\n \"password\" : \"password123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getEmployeeById.rest",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/ems-web/employee/getEmployeeById.rest?empId=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ems-web",
+						"employee",
+						"getEmployeeById.rest"
+					],
+					"query": [
+						{
+							"key": "empId",
+							"value": "3",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "CCA6FE62EB2131D9A5A98CE9530F5BE48830520884843676CD4EA610488C4B85",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"userName\" : \"user1\",\n \"password\" : \"password123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "insertEmployee.rest",
+			"request": {
+				"url": "http://localhost:8080/ems-web/employee/insertEmployee.rest",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "CCA6FE62EB2131D9A5A98CE9530F5BE48830520884843676CD4EA610488C4B85",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"empName\" : \"ABCTest\",\n \"empSalary\" : \"2000000\",\n \"empDOJ\" : \"23/12/2000\",\n \"empDOR\" : \"20/12/2019\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "updateEmployee.rest",
+			"request": {
+				"url": "http://localhost:8080/ems-web/employee/updateEmployee.rest",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "CCA6FE62EB2131D9A5A98CE9530F5BE48830520884843676CD4EA610488C4B85",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"empId\" : \"3\", \t\n \"empName\" : \"ABCTest\",\n \"empSalary\" : \"2000000\",\n \"empDOJ\" : \"23/12/2000\",\n \"empDOR\" : \"20/12/2019\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deleteEmployee.rest",
+			"request": {
+				"url": "http://localhost:8080/ems-web/employee/deleteEmployee.rest",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "CCA6FE62EB2131D9A5A98CE9530F5BE48830520884843676CD4EA610488C4B85",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"empId\" : \"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "logout.rest",
+			"request": {
+				"url": "http://localhost:8080/ems-web/employee/logout.rest",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "CCA6FE62EB2131D9A5A98CE9530F5BE48830520884843676CD4EA610488C4B85",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"userName\" : \"user1\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
